@@ -1,0 +1,12 @@
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    function sample2_execDaumPostcode() {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                // 'Android'라는 이름으로 등록한 인터페이스의 processDATA 함수를 호출
+                // data.address는 사용자가 선택한 주소입니다.
+                window.Android.processDATA(data.address);
+            }
+        }).open();
+    }
+</script>
